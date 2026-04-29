@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "IMDB Play Button",
+  "version": "1.0.0",
+  "description": "Adds a floating play button on IMDb title pages and redirects to playimdb.com.",
+  "permissions": [],
+  "host_permissions": ["*://*.imdb.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.imdb.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
